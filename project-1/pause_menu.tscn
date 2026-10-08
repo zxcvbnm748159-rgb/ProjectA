@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://qyaeh5ds5e2x"]
+
+[ext_resource type="Script" uid="uid://bhlnhu32of0x2" path="res://pause_menu.gd" id="1_hdmo1"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1487601142]
+script = ExtResource("1_hdmo1")
+
+[node name="Panel" type="Panel" parent="." unique_id=303171046]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=479917517]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.5
+offset_top = -33.0
+offset_right = 49.5
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResumeButton" type="Button" parent="Panel/VBoxContainer" unique_id=1614092711]
+layout_mode = 2
+text = "เล่นต่อ"
+
+[node name="QuitButton" type="Button" parent="Panel/VBoxContainer" unique_id=1179744824]
+layout_mode = 2
+text = "กลับหน้าหลัก
+"

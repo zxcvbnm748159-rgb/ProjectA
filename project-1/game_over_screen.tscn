@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://dvn7yoabdtidi"]
+
+[ext_resource type="Script" uid="uid://rd2h86qin7ew" path="res://game_over_screen.gd" id="1_gt22q"]
+
+[node name="GameOverScreen" type="CanvasLayer" unique_id=136076221]
+script = ExtResource("1_gt22q")
+
+[node name="Panel" type="Panel" parent="." unique_id=637323972]
+custom_minimum_size = Vector2(400, 300)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container" type="VBoxContainer" parent="Panel" unique_id=1052715980]
+custom_minimum_size = Vector2(400, 250)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -144.5
+offset_right = 160.0
+offset_bottom = 144.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Title" type="Label" parent="Panel/Container" unique_id=1993038082]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Game Over"
+
+[node name="WaveLabel" type="Label" parent="Panel/Container" unique_id=170408715]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Wave: 5"
+
+[node name="HighScoreLabel" type="Label" parent="Panel/Container" unique_id=2144896601]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "High Score: 10"
+
+[node name="ButtonContainer" type="HBoxContainer" parent="Panel/Container" unique_id=32924332]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="RetryButton" type="Button" parent="Panel/Container/ButtonContainer" unique_id=2093976240]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Retry (Wave 1)"
+
+[node name="LoadButton" type="Button" parent="Panel/Container/ButtonContainer" unique_id=868171101]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Load Save"

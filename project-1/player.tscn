@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://df73ww2y0343v"]
+
+[ext_resource type="Script" uid="uid://dtrk7fihovptk" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="PackedScene" uid="uid://bw360j1w2v0ab" path="res://models/player.gltf" id="2_onrkg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u0ya7"]
+
+[node name="Player" type="CharacterBody3D" unique_id=1212870230]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+script = ExtResource("1_4flbx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1661831257]
+shape = SubResource("BoxShape3D_u0ya7")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1539497092]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+light_color = Color(1, 0.6901961, 0.4392157, 1)
+light_energy = 1.5
+omni_range = 6.0
+
+[node name="Model" parent="." unique_id=214874090 instance=ExtResource("2_onrkg")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, -0.5, 0)
